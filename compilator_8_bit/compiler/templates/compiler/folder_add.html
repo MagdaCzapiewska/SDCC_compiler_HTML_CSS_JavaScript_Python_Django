@@ -1,0 +1,15 @@
+{% comment %} {% extends "compiler/base.html" %} {% endcomment %}
+
+{% comment %} {% block main %} {% endcomment %}
+    <form method="POST" class="form" action="{% url 'add-folder' id %}" id="add_folder_form">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-control">
+                {{field.label_tag}}
+                {{field}}
+                {{field.errors}}
+            </div>
+        {% endfor %}
+        <button type="button" onclick="return submitAddFolder();">Create folder</button>
+    </form>
+{% comment %} {% endblock %} {% endcomment %}

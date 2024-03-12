@@ -1,0 +1,8 @@
+<div class="main-file" id="allFiles">
+    <input type="hidden" id="selected_folder"></input>
+    <ul>
+        {% for node in folder_structure %}
+            {% include "compiler/tree.html" %}
+        {% endfor %}
+    </ul>
+</div>

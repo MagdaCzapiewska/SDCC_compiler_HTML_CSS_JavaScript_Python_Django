@@ -1,0 +1,17 @@
+<li>
+    {% if node.is_file %}
+        {% comment %} <a href="{% url 'file' node.id %}">{{node.name}}, {{node.id}}</a> {% endcomment %}
+        <a href="" id="/file/{{node.id}}" class="file">{{node.name}}, {{node.id}}</a>
+    {% else %}
+        <span class="caret" id="folder_{{node.id}}">{{node.name}}, {{node.id}}</span>
+    {% endif %}
+    {% comment %} {% if node.has_children %} {% endcomment %}
+    <ul class="nested">
+        {% for child in node.children %}
+            {% with node=child template_name="compiler/tree.html" %}
+                {% include template_name %}
+            {% endwith %}
+        {% endfor %}
+    </ul>
+    {% comment %} {% endif %} {% endcomment %}
+</li>

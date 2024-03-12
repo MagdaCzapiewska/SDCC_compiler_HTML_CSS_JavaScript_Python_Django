@@ -1,0 +1,362 @@
+:root {
+    --color1: #F39C12;
+    --color2: grey;
+}
+
+.mode2 {
+    --color1: #33ddff;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background: var(--color1);
+    padding: 0;
+}
+
+.header-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav__items {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 3em;
+    line-height: 3em;
+}
+
+.header-nav__items > li {
+    display: block;
+    padding-left: 1em;
+    width: 150px;
+}
+
+#logout {
+    text-align: right;
+    width: calc(100% - 720px)
+}
+
+#login {
+    text-align: right;
+    width: calc(100% - 50px)
+}
+
+.header-nav__items a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+.header-nav__items a:hover,
+.header-nav__items a:active {
+    color: white;
+}
+
+.header-nav__items > li > ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--color1);
+    position: absolute;
+    width: 150px;
+}
+
+.header-nav__items > li:hover > ul {
+    display: block;
+}
+
+.header-nav__items > li > ul > li {
+    display: block;
+    padding-left: 1em;
+    border-top: 1px solid #FFF;
+}
+
+@media all and (max-width: 500px) {
+    .header-nav__items {
+      flex-direction: column;
+    }
+}
+
+.main-file {
+    float: left;
+    width: 20vw;
+    height: calc(100vh - 50px - 20px);
+    overflow: auto;
+    border-right: solid 1px;
+    padding-top: 10px;
+}
+
+.main-file ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.main-file > ul {
+    padding: 0.5m;
+}
+
+.main-file ul li {
+    list-style: none;
+}
+
+.main-code {
+    float: left;
+    width: 50vw;
+    height: calc(100vh - 250px - 20px);
+    overflow: auto;
+    border-right: solid 1px;
+    padding: 10px;
+}
+
+.main-fragment {
+    float: left;
+    width: calc(100% - 70vw - 2px - 60px);
+    height: calc(100vh - 250px - 20px);
+    overflow: auto;
+    padding: 10px;
+}
+
+@media all and (max-width: 500px) {
+    .main-file,
+    .main-code,
+    .main-fragment {
+        float: none;
+        width: 100%;
+        height: auto;
+        border-bottom: solid 1px;
+        max-height: 700px;
+    }
+}
+
+.tabs {
+    height: 200px;
+    width: calc(100% - 20vw - 1px - 20px);
+    float: left;
+    background-color: black;
+}
+
+.tabs-label {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0px 2px;
+    background-color: var(--color2);
+    display: inline-block;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tabs-options {
+    background-color: var(--color1);
+    height: calc(100% - 28px - 40px - 3px);
+    width: calc(100% - 40px);
+    padding: 20px;
+    overflow: auto;
+}
+
+.tabs-option {
+    display: none;
+    overflow: auto;
+}
+
+.tabs-option__title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.tabs-radio {
+    display: none;
+}
+
+@media all and (max-width: 500px) {
+    .tabs,
+    .tabs-options {
+        float: none;
+        width: 100%;
+    }
+}
+
+#one:checked ~ .tabs-options #one-option,
+#two:checked ~ .tabs-options #two-option,
+#three:checked ~ .tabs-options #three-option,
+#four:checked ~ .tabs-options #four-option {
+    display: block;
+}
+
+#one:checked ~ .tabs-labels #one-tab,
+#two:checked ~ .tabs-labels #two-tab,
+#three:checked ~ .tabs-labels #three-tab,
+#four:checked ~ .tabs-labels #four-tab {
+    background-color: var(--color1);
+    color: black; 
+    border-top: 3px solid var(--color2);
+}
+
+
+
+
+
+
+
+
+.form {
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 30rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    background-color: #1f0050;
+    color: white;
+    border: 1px solid #1f0050;
+}
+
+button:hover,
+button:active {
+    background-color: #320777;
+    border-color: #320777;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.form-control input,
+.form-control textarea {
+    font: inherit;
+    padding: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: block;
+    width: 10rem;
+}
+
+.form-control textarea {
+    width: 15rem;
+}
+
+.form-control input[type=file] {
+    width: 15rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    border-color: #1f0050;
+    outline: none;
+    background-color: #f4eeff;
+}
+
+.form-control label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.errorlist {
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+    color: #680000;
+}
+
+.errors input {
+    border-color: #680000;
+    background-color: #fde3e3;
+}
+
+.errors label {
+    color: #680000;
+}
+
+
+
+
+
+
+.code {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas ,Liberation Mono, monospace;
+    white-space: pre;
+    font-size: small;
+}
+
+.line-counter {
+    text-align: right;
+    padding-right: 1em;
+    width: 3.5em;
+    display: inline-block;
+}
+
+
+.asm-header:hover {
+    background-color: #7d9ec7;
+}
+
+.asm-body:hover,
+.asm-header:hover + .asm-body {
+    background-color: rgb(236, 207, 168);
+}
+
+
+.code-section-outer:hover {
+    background-color: rgb(236, 207, 168);
+}
+
+.code-section-inner:hover {
+    background-color: #7d9ec7;
+}
+
+
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+  
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.caret-red {
+    color: red;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+}
+
+
+.caret-red-bold {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+{% comment %} {% extends "compiler/base.html" %} {% endcomment %}
+
+{% comment %} {% block main %} {% endcomment %}
+    <form method="POST" class="form" id="delete_form" action="{{action}}">
+        {% csrf_token %}
+        <div class="form-control">
+            <label>Are you sure you want to delete {{object}}?</label>
+        </div>
+        <button type="button" onclick="return {{onclick}}">Delete</button>
+    </form>
+{% comment %} {% endblock %} {% endcomment %}

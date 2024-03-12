@@ -1,0 +1,9 @@
+{% extends "compiler/main_code.html" %}
+
+{% block fragment %}
+    <div id="parser_result">
+        {% for line in parsed_data %}
+            <div class="code">{{line}}</div>
+        {% endfor %}
+    </div>
+{% endblock %}

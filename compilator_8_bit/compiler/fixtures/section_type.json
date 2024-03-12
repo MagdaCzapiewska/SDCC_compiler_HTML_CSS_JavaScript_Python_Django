@@ -1,0 +1,37 @@
+[
+    {
+        "model": "compiler.sectiontype",
+        "pk": 1,
+        "fields": {
+            "name": "procedure"
+        }
+    },
+    {
+        "model": "compiler.sectiontype",
+        "pk": 2,
+        "fields": {
+            "name": "comment"
+        }
+    },
+    {
+        "model": "compiler.sectiontype",
+        "pk": 3,
+        "fields": {
+            "name": "directive"
+        }
+    },
+    {
+        "model": "compiler.sectiontype",
+        "pk": 4,
+        "fields": {
+            "name": "variable"
+        }
+    },
+    {
+        "model": "compiler.sectiontype",
+        "pk": 5,
+        "fields": {
+            "name": "assembly"
+        }
+    }
+]

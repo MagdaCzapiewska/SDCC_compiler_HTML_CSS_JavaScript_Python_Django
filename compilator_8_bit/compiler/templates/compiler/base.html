@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="mode2">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-bit compiler</title>
+    <link rel="stylesheet" href="{% static 'compiler/main.css' %}">
+    <script src="{% static 'compiler/main.js' %}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <ul class="header-nav__items">
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li>
+                    <a href="" id="menu_file">File</a>
+                    <ul>
+                        <li><a href="" id="add_root_folder">New root folder</a></li>
+                        <li><a href="" id="add_subfolder">New subfolder</a></li>
+                        <li><a href="" id="delete_folder">Delete folder</a></li>
+                        <li><a href="" id="add_file">New file</a></li>
+                        <li><a href="" id="delete_file">Delete file</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" id="menu_code">Code</a>
+                    <ul>
+                        <li><a href="" id="split">Split</a></li>
+                        <li><a href="" id="create_section">Create section</a></li>
+                        <li><a href="" id="compile">Compile</a></li>
+                        <li><a href="" id="delete_section">Delete section</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" id="menu_asm">Asm</a>
+                    <ul>
+                        <li><a href="" id="download_asm">Download asm</a></li>
+                        <li><a href="" id="hide_asm_body">Hide asm body</a></li>
+                        <li><a href="" id="show_asm_body">Show asm body</a></li>
+                    </ul>
+                </li>
+                <li id="logout">
+                    <a href="{% url 'logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li id="login">
+                    <a href="{% url 'login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    {% block main %}{% endblock %}
+</body>
+</html>

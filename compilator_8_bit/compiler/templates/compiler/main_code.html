@@ -1,0 +1,20 @@
+{% comment %} {% extends "compiler/index.html" %} {% endcomment %}
+
+{% comment %} {% block code %} {% endcomment %}
+    <div class="main-code" id="code">
+        <input type="hidden" id="selected_file" value="{{file_id}}"></input>
+        <input type="hidden" id="section_to_remove"></input>
+        {% for line in source_code %}
+            {% if line.start_line > 0 %}
+                <div class="{{line.class_name}}" id="start{{line.start_line}}-end{{line.end_line}}" title="{{line.section_type}}, {{line.section_status}}">
+            {% endif %}
+            <div id= "source_line_{{forloop.counter}}" class="code"><span class="line-counter">{{forloop.counter}}</span>{{line.line}}</div>
+            {% if line.end_div %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="main-fragment" id="fragment">
+        {% block fragment %}{% endblock %}
+    </div>
+{% comment %} {% endblock %} {% endcomment %}

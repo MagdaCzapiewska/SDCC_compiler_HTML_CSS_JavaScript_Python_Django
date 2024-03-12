@@ -1,0 +1,18 @@
+{% extends "compiler/main_code.html" %}
+
+{% block fragment %}
+    <input type="hidden" id="compiled_name" value={{asm_name}}>
+    <div id="compiled_code">
+        {% for line in asm_code %}
+            {% if line.start == True and line.position == "before" and forloop.counter > 1 %}</div>{% endif %}
+            {% if line.start == True and line.position == "before" %}<div class="{{ line.start_class }}">{% endif %}
+                <div class="code{% if line.source_code_line > 0 %} source-refer{% endif %}"
+                    {% if line.source_code_line > 0 %}
+                        data-source-line={{line.source_code_line}}
+                    {% endif %}
+                >{{line.code}}</div>
+            {% if line.start == True and line.position == "after" %}</div><div class="{{ line.start_class }}">{% endif %}
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

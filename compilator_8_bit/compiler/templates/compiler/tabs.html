@@ -1,0 +1,59 @@
+<div class="tabs">
+    <form method="POST" id="compiler_form" action="{% url 'compile' %}">
+        {% csrf_token %}
+        <input type="hidden" id="compiler_form_file_id" name="file_id"></input>
+
+        <input class="tabs-radio" id="one" name="group" type="radio" checked>
+        <input class="tabs-radio" id="two" name="group" type="radio">
+        <input class="tabs-radio" id="three" name="group" type="radio">
+        <input class="tabs-radio" id="four" name="group" type="radio">
+
+        <div class="tabs-labels">
+            <label class="tabs-label" id="one-tab" for="one">STANDARD</label>
+            <label class="tabs-label" id="two-tab" for="two">OPTIMIZATIONS</label>
+            <label class="tabs-label" id="three-tab" for="three">PROCESSOR</label>
+            <label class="tabs-label" id="four-tab" for="four">DEPENDENT</label>
+        </div>
+
+        <div class="tabs-options">
+            <div class="tabs-option" id="one-option">
+                <select id="command_line_standard" name="command_line_standard">
+                    {% for option in command_line_options.standard %}
+                        <option value="{{option}}" {% if option == request.session.standard %}selected{% endif %}>{{option}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="tabs-option" id="two-option">
+                {% for option in command_line_options.optimization %}
+                    <input
+                        type="checkbox"
+                        name="command_line_optimization"
+                        value={{option}}
+                        id="optimization_{{forloop.counter}}"
+                        {% if option in request.session.optimizations %}checked{% endif %}
+                    >
+                    <label for="optimization_{{forloop.counter}}">{{option}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                {% endfor %}
+            </div>
+            <div class="tabs-option" id="three-option">
+                <select id="command_line_processor" name="command_line_processor">
+                    {% for option in command_line_options.processor %}
+                        <option value="{{option}}" {% if option == request.session.processor %}selected{% endif %}>{{option}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="tabs-option" id="four-option">
+                {% for option in request.session.dependent_options %}
+                    <input
+                        type="checkbox"
+                        name="command_line_dependent"
+                        value={{option}}
+                        id="dependent_{{forloop.counter}}"
+                        {% if option in request.session.dependent %}checked{% endif %}
+                    >
+                    <label for="dependent_{{forloop.counter}}">{{option}}</label><br />
+                {% endfor %}
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+{% extends "compiler/main_code.html" %}
+
+{% block fragment %}
+    <div id="compilation_error">
+        {% for line in error_code %}
+        <div class="code{% if line.source_code_line > 0 %} source-refer{% endif %}"
+            {% if line.source_code_line > 0 %}
+                data-source-line={{line.source_code_line}}
+            {% endif %}
+        >{{line.line_content}}</div>
+        {% endfor %}
+    </div>
+{% endblock %}

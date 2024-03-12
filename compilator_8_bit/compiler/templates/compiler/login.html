@@ -1,0 +1,25 @@
+{% extends "compiler/base.html" %}
+
+{% block main %}
+    <form method="POST" class="form" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <div class="errors">
+                <label>
+                    Your username and password did not match!
+                </label>
+            </div>
+        {% endif %}
+
+        {% for field in form %}
+            <div class="form-control">
+                {{field.label_tag}}
+                {{field}}
+                {{field.errors}}
+            </div>
+        {% endfor %}
+        <button>Log in</button>
+        <input type="hidden" name="next" value="{{next}}">
+    </form>
+{% endblock %}

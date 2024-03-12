@@ -1,0 +1,74 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$dbfUwuv6sZPpyc21WBBnvz$Rxji0bXrq9oCY9ogj9STPb4IHst/1P0LpWfkGQ8wUGA=",
+        "last_login": "2023-05-16T20:18:54.975Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-24T18:24:29.445Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$YTR7TYJOX8xL6hlwDTL1ko$js2HxpMx7EPgonK8944ZZ9idOit+UBcKbdh+pS1lpXo=",
+        "last_login": "2023-05-18T17:02:30.180Z",
+        "is_superuser": false,
+        "username": "Test",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-16T20:21:08.340Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$L9LBsXsFXL3O6BIMGPjZ47$4zx/LFspOyrzvl049h92sxFwSHH45/6fxqPbn5w6JTI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "User2",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-16T20:22:00.404Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$KpNq8x7Jx5eBrGxO5UksBn$YjwEgLy+UN6w2zQN4XYtwLwoXLqf47WrHTaguxhMRK4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "User3",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-16T20:22:22.888Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

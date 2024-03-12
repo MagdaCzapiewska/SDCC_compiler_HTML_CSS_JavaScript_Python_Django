@@ -1,0 +1,18 @@
+{% extends "compiler/base.html" %}
+
+{% block main %}
+    <main>
+        {% include "compiler/main_file.html" %}
+        <div class="middle-place" id="middle_place">
+            {% block code %}
+                <div class="main-code" id="code">
+                    Tekst programu
+                </div>
+                <div class="main-fragment" id="fragment">
+                    Fragment programu
+                </div>
+            {% endblock %}
+        </div>
+        {% include "compiler/tabs.html" %}
+    </main>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% comment %} {% extends "compiler/base.html" %} {% endcomment %}
+
+{% comment %} {% block main %} {% endcomment %}
+    <form method="POST" enctype="multipart/form-data" class="form" action="{% url 'add-file' id %}" id="add_file_form">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-control">
+                {{field.label_tag}}
+                {{field}}
+                {{field.errors}}
+            </div>
+        {% endfor %}
+        <button type="button" onclick="return submitAddFile();">Add file</button>
+    </form>
+{% comment %} {% endblock %} {% endcomment %}

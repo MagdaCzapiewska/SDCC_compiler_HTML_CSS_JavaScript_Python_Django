@@ -1,0 +1,23 @@
+[
+    {
+        "model": "compiler.sectionstatus",
+        "pk": 1,
+        "fields": {
+            "name": "Compiled without warnings"
+        }
+    },
+    {
+        "model": "compiler.sectionstatus",
+        "pk": 2,
+        "fields": {
+            "name": "Compiled with warnings"
+        }
+    },
+    {
+        "model": "compiler.sectionstatus",
+        "pk": 3,
+        "fields": {
+            "name": "Does not compile"
+        }
+    }
+]

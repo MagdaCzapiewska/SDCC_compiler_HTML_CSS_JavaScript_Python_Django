@@ -1,0 +1,184 @@
+[
+    {
+        "model": "compiler.folder",
+        "pk": 1,
+        "fields": {
+            "name": "Clothing",
+            "description": "",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": null
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 2,
+        "fields": {
+            "name": "Mens",
+            "description": "",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 1
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 3,
+        "fields": {
+            "name": "Womens",
+            "description": "",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 1
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 4,
+        "fields": {
+            "name": "Suits",
+            "description": "",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 2
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 5,
+        "fields": {
+            "name": "Slacks",
+            "description": "Suit Slacks",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 4
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 6,
+        "fields": {
+            "name": "Jackets",
+            "description": "Suit Jackets",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 4
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 7,
+        "fields": {
+            "name": "Dresses",
+            "description": "Women Dresses",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 3
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 8,
+        "fields": {
+            "name": "Skirts",
+            "description": "Women Skirts",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 3
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 9,
+        "fields": {
+            "name": "Blouses",
+            "description": "Women Blouses",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 3
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 10,
+        "fields": {
+            "name": "Evening",
+            "description": "Evening Dresses",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 7
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 11,
+        "fields": {
+            "name": "SunDresses",
+            "description": "SunDresses",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": true,
+            "enable_update_date": null,
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 7
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 12,
+        "fields": {
+            "name": "Shirts",
+            "description": "",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": false,
+            "enable_update_date": "2023-04-24T19:08:52.141Z",
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 2
+        }
+    },
+    {
+        "model": "compiler.folder",
+        "pk": 13,
+        "fields": {
+            "name": "Shirts",
+            "description": "",
+            "create_date": "2023-04-24T19:08:52.141Z",
+            "user": 1,
+            "enabled": false,
+            "enable_update_date": "2023-04-24T19:08:52.141Z",
+            "update_date": "2023-04-24T19:08:52.141Z",
+            "parent_id": 3
+        }
+    }
+]
